@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0066cc 0%, #0099ff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('');
+  background-size: 50px 50px;
+  opacity: 0.3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo::before {
+  content: '';
+  font-size: 2rem;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pharmacy-symbol {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+.pharmacy-symbol img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.highlight-text {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border-left: 4px solid white;
+}
+
+.form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.form-card h3 {
+  color: #0066cc;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.form-card p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 71, 87, 0.4);
+}
+
+.info-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.info-badge::before {
+  content: '✓';
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.benefits {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.benefits h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #0066cc;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #0066cc, #0099ff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 2rem;
+}
+
+.benefit-card h3 {
+  color: #0066cc;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.services {
+  padding: 80px 20px;
+  background: white;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #0066cc;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s;
+}
+
+.service-card:hover {
+  border-color: #0066cc;
+  box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #0066cc;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.cta-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+  color: #333;
+}
+
+.cta-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.professional-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-photo::after {
+  content: 'Sua Foto Aqui';
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+}
+
+.cta-text {
+  text-align: left;
+}
+
+.cta-text h2 {
+  color: #0066cc;
+}
+
+.cta-text p {
+  color: #333;
+}
+
+.professional-info {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 25px;
+  border-left: 4px solid #0066cc;
+}
+
+.professional-info h4 {
+  color: #0066cc;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.professional-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.credential {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.credential::before {
+  content: '✓';
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .form-card {
+    padding: 30px 20px;
+  }
+
+  .cta-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .professional-photo {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .cta-text {
+    text-align: center;
+  }
+
+  .cta-text h2 {
+    font-size: 2rem;
+  }
+}
